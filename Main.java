@@ -12,13 +12,7 @@ public class Main{
             "                          |__ | / / / /_/ / / / / /| |                      \n" +
             "                         ___/ // / / ____/ /_/ / ___ |                      \n" +
             "                        /____//_/ /_/    |____/_/  |_|                      \n");
-            
-            
-            
-           
-          
-
-
+                             
         System.out.print("\n\n");    
         Menu session = new Menu();
              session.inicializa();
