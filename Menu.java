@@ -10,7 +10,7 @@ public class Menu {
         int subEscolha = 0;
         boolean continua = true;
         Scanner scan = new Scanner(System.in);
-        
+        String registro = null; 
         do{        
             System.out.println("\t\t ---------------------------------"); 
             System.out.println("\t\t| [1] Carregar os Dados          |");
@@ -30,7 +30,7 @@ public class Menu {
                         dados.carregaCsv(arquivo);                                                
                 break;
                 case 2:                              
-                    dados.consultaFrota(); //Opção para apresentar todos os onibus cadastrados
+                    System.out.println(dados.consultaFrota()); //Opção para apresentar todos os onibus cadastrados
                 break;
                 case 3:
                     //Opção para pesquisar a frota utilizando filtros
@@ -46,47 +46,48 @@ public class Menu {
                         case 1:
                             System.out.println("Informe o prefixo do Onibus:");                    
                             int prefixo = scan.nextInt();
-                                dados.consultaPrefixo(prefixo);
+                                registro = dados.consultaPrefixo(prefixo);
+                                System.out.println(registro);
                         break;
                         case 2:                        
                             System.out.println("Informe a empresa operadora do Onibus:");                    
                                 scan.nextLine();
-                            String empresa = scan.nextLine();                                         
-                                dados.consultaEmpresa(empresa);                               
+                            String empresa = scan.nextLine();
+                                registro = dados.consultaEmpresa(empresa);                               
+                                System.out.println(registro);
                         break;
                         case 3:                      
                             System.out.println("Informe a marca do Onibus:");                    
                                 scan.nextLine();
                             String marca = scan.nextLine();
-                                dados.consultaMarca(marca);                               
+                                registro = dados.consultaMarca(marca);                               
+                                System.out.println(marca);
                         break;
                         case 4:
                             System.out.println("Informe a placa do Onibus:");                    
                                 String placa = scan.next();
-                                    dados.consultaPlaca(placa);
+                                    registro = dados.consultaPlaca(placa);
                         break;
                         case 5:
                             System.out.println("Informe o ano de fabricação do Onibus:");                    
                                 int ano_fabricacao = scan.nextInt();
-                                    dados.consultaAno(ano_fabricacao);
+                                   registro = dados.consultaAno(ano_fabricacao);
+                                   System.out.println(registro);
                         break;
                         default:
                             System.out.println("Opção inválida!");
                         break;                   
                     }
                 break;
-                case 4:        //Método para correção
-                    /* Esse método está retornando null na consulta, como se não houve nenhum onibus cadastrado
-                       é necessário gravar os dados recebidos da última consulta realiza na opção 3 
-                    */
+                case 4:        
                     System.out.println("\t\tNome do arquivo para salvar os dados da consulta");                        
                         scan.nextLine();
-                    String registro =  scan.nextLine();                                      
-                    FileWriter reg = new FileWriter(registro);//Cria um arquivo de registro
+                    String registro2 =  scan.nextLine();                                      
+                    FileWriter reg = new FileWriter(registro2);//Cria um arquivo de registro
                     PrintWriter gravaRegistro = new PrintWriter(reg); //Realiza a gravação dos dados no arquivo
-                    gravaRegistro.write("Consulta Frota: " + dados.consultaFrota());//Grava em Buffer os dados
-                    reg.flush(); //Grava os dados no disco,
-                    reg.close(); //Encerra a gravação de dados
+                    gravaRegistro.write("Dados salvos na ultima consulta: " + registro);//Grava em Buffer os dados
+                        reg.flush(); //Grava os dados no disco,
+                        reg.close(); //Encerra a gravação de dados
                                         
                 break;
                 case 0:
