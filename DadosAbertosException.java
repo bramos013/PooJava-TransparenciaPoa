@@ -6,4 +6,7 @@ public class DadosAbertosException extends Exception{
             System.out.println("\t\tFalha nos dados Abertos");
         }
     }
+    public DadosAbertosException(){
+        System.err.println("\t\tNenhuma consulta realizada!");
+    }
 }
