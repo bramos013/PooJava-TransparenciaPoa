@@ -113,7 +113,7 @@ public class Menu {
                             reg.close(); //Encerra a gravação de dados                    
                         }
                         else{
-                            throw new DadosAbertosException(registro);                        
+                            throw new DadosAbertosException();                        
                         }
                     }
                     catch(DadosAbertosException e){
