@@ -1,7 +1,5 @@
-import java.io.IOException;
-
 public class Main{
-    public static void main(String[] args) throws IOException{    
+    public static void main(String[] args) throws Exception{    
         System.out.println(
             "      ______                                                       _        \n" +
             "     /_  __/________ _____  _________  ____ _________  ____  _____(_)___    \n" +

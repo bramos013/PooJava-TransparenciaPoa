@@ -57,10 +57,10 @@ public class Onibus {
     @Override
     public String toString() {
         return "Onibus [Prefixo=" + prefixo + 
-               " \tEmpresa=" + empresa + 
-               " \tMarca=" + marca + 
-               " \tPlaca=" + placa + 
-               " \tAno Fabricação=" + ano_fabricacao + "]";
+               "\tEmpresa=" + empresa + 
+               "\tMarca=" + marca + 
+               "\tPlaca=" + placa + 
+               "\tAno Fabricação=" + ano_fabricacao + "]";
     }                
     
 }
