@@ -54,40 +54,40 @@ public class Menu {
                             subEscolha = scan.nextInt();
                             switch (subEscolha) {  
                                 case 1:
-                                    System.out.println("Informe o prefixo do Onibus:");                    
+                                    System.out.println("\t\tInforme o prefixo do Onibus:");                    
                                         int prefixo = scan.nextInt();
                                     registro = dados.consultaPrefixo(prefixo);
                                         System.out.println(registro);
                                 break;
                                 case 2:                        
-                                    System.out.println("Informe a empresa operadora do Onibus:");                    
+                                    System.out.println("\t\tInforme a empresa operadora do Onibus:");                    
                                         scan.nextLine();
                                     String empresa = scan.nextLine();
                                         registro = dados.consultaEmpresa(empresa);                               
                                         System.out.println(registro);
                                 break;                                
                                 case 3:                      
-                                    System.out.println("Informe a marca do Onibus:");                    
+                                    System.out.println("\t\tInforme a marca do Onibus:");                    
                                         scan.nextLine();
                                     String marca = scan.nextLine();
                                         registro = dados.consultaMarca(marca);                               
                                         System.out.println(registro);
                                 break;
                                 case 4:
-                                    System.out.println("Informe a placa do Onibus:");                   
+                                    System.out.println("\t\tInforme a placa do Onibus:");                   
                                         scan.nextLine(); 
                                     String placa = scan.nextLine();
                                         registro = dados.consultaPlaca(placa);
                                         System.out.println(registro);
                                 break;
                                 case 5:
-                                    System.out.println("Informe o ano de fabricação do Onibus:");                    
+                                    System.out.println("\t\tInforme o ano de fabricação do Onibus:");                    
                                         int ano_fabricacao = scan.nextInt();
                                     registro = dados.consultaAno(ano_fabricacao);
                                             System.out.println(registro);
                                 break;
                                 default:
-                                    System.out.println("Opção inválida!");
+                                    System.out.println("\t\tOpção inválida!");
                                 break;                   
                             }                             
                         }

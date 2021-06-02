@@ -53,9 +53,14 @@ public class CarregaDados{
         //Metodos de consulta utilizando Prefixo
     public  String consultaPrefixo(int prefixo){        
         String res = "";
+        int cont = 0;
             for (Onibus onibus : frota) {
-                if(onibus.getPrefixo() == prefixo)
-                    res += "\n" + onibus.toString();                
+                if(onibus.getPrefixo() == prefixo){
+                    res += "\n" + onibus.toString();                                
+                    cont++;
+                }
+                if(cont == 0)
+                    res = "\t\tNenhuma informação encontrada com esse valor!";                    
             }
         return res;
     }
@@ -63,19 +68,29 @@ public class CarregaDados{
         //Metodo de consulta utilizando  Empresa
     public  String consultaEmpresa(String empresa){
         String res = "";
+        int cont = 0;
             for (Onibus onibus : frota) {
-                if(onibus.getEmpresa().equals(empresa))
-                    res += "\n" + onibus.toString();                
-            }            
+                if(onibus.getEmpresa().equals(empresa)){
+                    res += "\n" + onibus.toString();                                
+                    cont++;
+                }
+                if(cont == 0)
+                    res = "\t\tNenhuma informação encontrada com esse valor!";                    
+            }
         return res;
-    }    
-
+    }
+    
         //Metodo de consulta utilizando Marca
     public  String consultaMarca(String marca){
         String res = "";
+        int cont = 0;
             for (Onibus onibus : frota) {
-                if(onibus.getMarca().equals(marca))
+                if(onibus.getMarca().equals(marca)){
                     res += "\n" + onibus.toString();
+                    cont++;
+                }
+                if(cont == 0)
+                res = "\t\tNenhuma informação encontrada com esse valor!";                    
             }
         return res;
     }        
@@ -83,19 +98,29 @@ public class CarregaDados{
         //Metodo de consulta utilizando Placa
     public  String consultaPlaca(String placa){
         String res = "";
+        int cont = 0;
             for (Onibus onibus : frota) {
-                if(onibus.getPlaca().equals(placa))
-                    res += "\n" + onibus.toString();
+                if(onibus.getPlaca().equals(placa)){
+                    res += "\n" + onibus.toString();                                
+                    cont++;
+                }
+                if(cont == 0)
+                res = "\t\tNenhuma informação encontrada com esse valor!";                    
             }
         return res;
-    }        
+    }      
 
         //Metodo de consulta utilizando Ano de Fabricação
     public  String consultaAno(int ano_fabricacao){        
         String res = "";
+        int cont = 0;
             for (Onibus onibus : frota) {
-                if(onibus.getAno_fabricacao() == ano_fabricacao)
-                    res += "\n" + onibus.toString();                
+                if(onibus.getAno_fabricacao() == ano_fabricacao){
+                    res += "\n" + onibus.toString();                                
+                    cont++;
+                }
+                if(cont == 0)
+                res = "\t\tNenhuma informação encontrada com esse valor!";                    
             }
         return res;
     }
